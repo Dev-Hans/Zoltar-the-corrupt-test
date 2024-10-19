@@ -1,0 +1,26 @@
+{
+  "auth": {
+    "user_pool_id": "us-west-2_ln0LYmdwm",
+    "aws_region": "us-west-2",
+    "user_pool_client_id": "217qb3pbhrfph69c01lpnntqqf",
+    "identity_pool_id": "us-west-2:cbcc1055-b990-45e7-8277-2c90ffa98569",
+    "standard_required_attributes": [
+      "email"
+    ],
+    "username_attributes": [
+      "email"
+    ],
+    "user_verification_types": [
+      "email"
+    ],
+    "password_policy": {
+      "min_length": 8,
+      "require_numbers": true,
+      "require_lowercase": true,
+      "require_uppercase": true,
+      "require_symbols": true
+    },
+    "unauthenticated_identities_enabled": true
+  },
+  "version": "1"
+}
