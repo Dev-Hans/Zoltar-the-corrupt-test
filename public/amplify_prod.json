@@ -1,9 +1,9 @@
 {
   "auth": {
-    "user_pool_id": "us-east-2_PF0iO2TDQ",
-    "aws_region": "us-east-2",
-    "user_pool_client_id": "1dn1vpra48g1s60h3ts10kuqp6",
-    "identity_pool_id": "us-east-2:fa79b6a1-5d28-4963-9051-163661ac0321",
+    "user_pool_id": "us-west-1_fv2Gr6Dfm",
+    "aws_region": "us-west-1",
+    "user_pool_client_id": "2oaccra69vsl8gkbvg28bhp7r6",
+    "identity_pool_id": "us-west-1:1d721b05-467c-4020-b237-1d379e1327ae",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -23,6 +23,88 @@
       "require_uppercase": true
     },
     "unauthenticated_identities_enabled": true
+  },
+  "data": {
+    "url": "https://5eryct2dwncjlesfo7gg63esmm.appsync-api.us-west-1.amazonaws.com/graphql",
+    "aws_region": "us-west-1",
+    "api_key": "da2-twkh3ceoefaz3hb5kevnlseqgu",
+    "default_authorization_type": "API_KEY",
+    "authorization_types": [
+      "AMAZON_COGNITO_USER_POOLS",
+      "AWS_IAM"
+    ],
+    "model_introspection": {
+      "version": 1,
+      "models": {
+        "Todo": {
+          "name": "Todo",
+          "fields": {
+            "id": {
+              "name": "id",
+              "isArray": false,
+              "type": "ID",
+              "isRequired": true,
+              "attributes": []
+            },
+            "content": {
+              "name": "content",
+              "isArray": false,
+              "type": "String",
+              "isRequired": false,
+              "attributes": []
+            },
+            "createdAt": {
+              "name": "createdAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            },
+            "updatedAt": {
+              "name": "updatedAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            }
+          },
+          "syncable": true,
+          "pluralName": "Todos",
+          "attributes": [
+            {
+              "type": "model",
+              "properties": {}
+            },
+            {
+              "type": "auth",
+              "properties": {
+                "rules": [
+                  {
+                    "allow": "public",
+                    "provider": "apiKey",
+                    "operations": [
+                      "create",
+                      "update",
+                      "delete",
+                      "read"
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "primaryKeyInfo": {
+            "isCustomPrimaryKey": false,
+            "primaryKeyFieldName": "id",
+            "sortKeyFieldNames": []
+          }
+        }
+      },
+      "enums": {},
+      "nonModels": {}
+    }
   },
   "version": "1.3"
 }
